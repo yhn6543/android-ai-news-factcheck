@@ -282,10 +282,8 @@ PowerShell에서 빌드와 설치를 직접 실행할 수도 있습니다.
 GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
 ```
 
-- 실제 API 키는 README, 이슈, 커밋에 기록하지 않습니다.
-- `local.properties`와 서명 파일은 `.gitignore`로 제외됩니다.
+
 - 키가 없으면 뉴스 기능은 사용할 수 있지만 Gemini 판별은 키 누락 안내를 표시합니다.
-- Android 클라이언트에 포함된 키는 추출될 수 있으므로 실제 배포에서는 서버 프록시와 키 제한 정책이 필요합니다.
 
 ## 테스트 방법
 
