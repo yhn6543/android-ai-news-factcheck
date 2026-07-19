@@ -1,0 +1,44 @@
+# Android Studio and local IDE state
+*.iml
+/.idea/
+/.kotlin/
+/.kotlinc/
+/captures/
+
+# Gradle and Android build outputs
+/.gradle/
+**/build/
+/.externalNativeBuild/
+/.cxx/
+*.apk
+*.aab
+
+# Local SDK paths and secrets
+/local.properties
+/.env
+/.env.*
+!/local.properties.example
+google-services.json
+secrets.properties
+
+# Signing material
+*.jks
+*.keystore
+*.p12
+*.pem
+key.properties
+keystore.properties
+
+# Generated diagnostics and local handoff files
+/reports/raw-news-inspector/
+/reports/news_integrity_report.json
+/reports/news_integrity_report.md
+/reports/window.xml
+/tools.zip
+/PROJECT_HANDOFF_FOR_NEW_CODEX_CHAT.md
+
+# Logs and OS metadata
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini

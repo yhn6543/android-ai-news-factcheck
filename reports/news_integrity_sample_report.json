@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "failCount": 0,
+  "warningCount": 0,
+  "excludedNonArticleCount": 0,
+  "domainMismatchCount": 0,
+  "boilerplateParagraphCount": 0,
+  "duplicateNormalizedOriginalUrlCount": 0,
+  "cardDetailOriginalUrlMismatchCount": 0,
+  "missingPublishedAtCount": 0,
+  "publishedAtWithoutSourceCount": 0,
+  "fallbackPresses": [],
+  "unavailablePresses": [],
+  "sourceSummaries": [
+    {"press":"YONHAP","rssStatus":"success (5)","crawlingStatus":"not run","unavailable":false,"rssArticleCount":5,"crawlingArticleCount":0},
+    {"press":"MBC","rssStatus":"success (5): Google News RSS 5 articles collected","crawlingStatus":"not run","unavailable":false,"rssArticleCount":5,"crawlingArticleCount":0},
+    {"press":"SBS","rssStatus":"success (5)","crawlingStatus":"not run","unavailable":false,"rssArticleCount":5,"crawlingArticleCount":0},
+    {"press":"KBS","rssStatus":"success (5): RSS 5 articles collected","crawlingStatus":"not run","unavailable":false,"rssArticleCount":5,"crawlingArticleCount":0},
+    {"press":"YTN","rssStatus":"success (5): Google News RSS 5 articles collected","crawlingStatus":"not run","unavailable":false,"rssArticleCount":5,"crawlingArticleCount":0}
+  ],
+  "pressSummaries": [
+    {"press":"YONHAP","status":"PASS","articleCount":1,"warningCount":0,"failCount":0,"boilerplateParagraphCount":0},
+    {"press":"MBC","status":"PASS","articleCount":1,"warningCount":0,"failCount":0,"boilerplateParagraphCount":0},
+    {"press":"SBS","status":"PASS","articleCount":1,"warningCount":0,"failCount":0,"boilerplateParagraphCount":0},
+    {"press":"KBS","status":"PASS","articleCount":1,"warningCount":0,"failCount":0,"boilerplateParagraphCount":0},
+    {"press":"YTN","status":"PASS","articleCount":1,"warningCount":0,"failCount":0,"boilerplateParagraphCount":0}
+  ],
+  "issues": [
+  ]
+}
