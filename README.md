@@ -295,57 +295,10 @@ GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
 .\gradlew.bat assembleDebug
 ```
 
-최근 로컬 자동 검증 결과:
-
-| 항목 | 결과 |
-| --- | --- |
-| Unit test | 성공, debug/release 합계 776 test executions, 실패 0 |
-| Android lint | 성공, 오류 0 |
-| Debug APK build | 성공 |
-| Device smoke test | 연결된 ADB 기기가 없어 미실행 |
-
-자동 테스트 통과는 실제 외부 뉴스 사이트와 Gemini API의 네트워크 동작을 보장하지 않습니다. 공개 전 아래 항목을 에뮬레이터 또는 실제 기기에서 별도로 확인해야 합니다.
-
-- [ ] 메인에서 연합뉴스, MBC, SBS, KBS, YTN 기사 표시
-- [ ] KBS 단독 선택과 기사 상세·원본 링크 동작
-- [ ] `AI` 또는 `삼성전자` 검색 카드의 이미지·본문 preview·matched keyword chip 표시
-- [ ] `rarekeyword123` 검색 후 무한 로딩 없이 빈 결과 종료
-- [ ] Gemini 판별 1회와 Grounding 근거·출처 표시
-
-## 공개 저장소 파일 정책
-
-포함 대상:
-
-- `app/src/main`, `app/src/test`
-- Gradle 설정과 Wrapper
-- `README.md`, `.gitignore`, `local.properties.example`
-- `docs/images` 실행 화면
-- `tools/raw-news-inspector`와 재현 가능한 소형 sample report
-
-제외 대상:
-
-- `local.properties`, `.env*`, 실제 API 키
-- `*.jks`, `*.keystore`, `key.properties` 등 서명 자료
-- `.gradle`, `.idea`, `.kotlin`, 모든 `build` 폴더
-- APK, AAB, 생성 로그, 원문 응답 파일, UI dump
-- `tools.zip`, 내부 작업 인수인계 문서
-
-## 알려진 한계
+## 한계
 
 - 뉴스 수집은 외부 RSS 주소, HTML 구조, 접근 정책과 네트워크 상태에 영향을 받습니다.
 - Google News RSS 원문 URL 해석은 항상 성공하지 않으며, 실패 시 언론사 RSS와 HTML 수집 경로를 확인합니다.
-- HTML Crawling은 각 사이트의 이용 약관과 robots.txt를 확인한 범위에서 사용해야 합니다.
 - 일부 RSS는 본문 전체나 이미지 URL을 제공하지 않아 카드 정보가 제한될 수 있습니다.
 - Gemini 판정은 오답이나 누락된 근거를 포함할 수 있으며 최종 사실 판단을 대신하지 않습니다.
-- 앱에 직접 포함한 API 키는 완전히 보호할 수 없습니다.
 - 자동화된 Compose UI/instrumentation test가 없어 화면과 실제 네트워크 동작은 기기 smoke test가 필요합니다.
-- 의존성 주입은 Hilt가 아닌 간단한 `AppContainer` 기반입니다.
-
-## 향후 개선 방향
-
-- API 키 보호와 사용량 제어를 위한 서버 프록시
-- Room 기반 기사 캐시와 오프라인 조회
-- Hilt 기반 의존성 주입
-- Compose UI 및 instrumentation test
-- RSS/HTML 파서 상태 모니터링과 회귀 테스트 자동화
-- 접근성, 앱 아이콘, 배포용 서명과 스토어 메타데이터 정리
